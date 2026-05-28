@@ -925,6 +925,15 @@ color:#e1306c;
 .social.tt{
 color:#69c9d0;
 }
+/* ===== MOBILE NAV ACTIVE FIX ===== */
+.nav-links.active {
+  right: 0;
+}
+
+/* optional: blocco scroll quando menu aperto */
+body.menu-open {
+  overflow: hidden;
+}
 </style>
 
 </head>
@@ -948,13 +957,29 @@ ADAM<span>BARBERSHOP</span>
 </div>
 
 <div class="nav-links" id="nav-links">
+<div class="nav-inner">
 
-<a href="#about">Lo Shop</a>
-<a href="#services">Servizi</a>
-<a href="gallery.html">Gallery</a>
-<a href="#abdou">Abdou</a>
-<a href="#reviews">Recensioni</a>
-<a href="#contact">Contatti</a>
+  <div class="logo">
+    ADAM<span>BARBERSHOP</span>
+  </div>
+
+  <!-- HAMBURGER MENU -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="#about">Lo Shop</a>
+    <a href="#services">Servizi</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#abdou">Abdou</a>
+    <a href="#reviews">Recensioni</a>
+    <a href="#contact">Contatti</a>
+  </div>
+
+</div>
 
 </div>
 
@@ -1414,6 +1439,14 @@ function prevSlide() {
     updateSlider();
   }
 }
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  nav.classList.toggle("active");
+  document.body.classList.toggle("menu-open");
+});
 </script>
 <!-- SOCIAL FLOAT BUTTONS -->
 <div class="social-float">
