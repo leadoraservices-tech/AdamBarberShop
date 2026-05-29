@@ -940,6 +940,60 @@ html, body {
 .nav-links{
   z-index:1000;
 }
+/* =========================
+   GALLERY BUTTON
+========================= */
+
+.gallery-btn{
+
+padding:14px 24px;
+
+border-radius:16px;
+
+border:1px solid var(--gold);
+
+color:var(--gold);
+
+font-weight:700;
+
+transition:var(--transition);
+
+}
+
+.gallery-btn:hover{
+
+background:var(--gold);
+
+color:black;
+
+transform:translateY(-3px);
+
+}
+
+E modifica questo:
+
+.nav-inner{
+max-width:1500px;
+margin:auto;
+padding:22px 7%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+in questo:
+
+.nav-inner{
+max-width:1500px;
+margin:auto;
+padding:22px 7%;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:20px;
+}
 </style>
 
 </head>
@@ -950,33 +1004,7 @@ html, body {
 
 <!-- NAVBAR -->
 
-<nav>
-
-  <div class="nav-inner">
-
-    <div class="logo">
-      ADAM<span>BARBERSHOP</span>
-    </div>
-
-    <!-- HAMBURGER MENU -->
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <div class="nav-links" id="nav-links">
-      <a href="#about">Lo Shop</a>
-      <a href="#services">Servizi</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="#abdou">Abdou</a>
-      <a href="#reviews">Recensioni</a>
-      <a href="#contact">Contatti</a>
-    </div>
-
-  </div>
-
-</nav>
+<nav> <div class="nav-inner"> <!-- LOGO --> <div class="logo"> ADAM<span>BARBERSHOP</span> </div> <!-- BOTTONE GALLERY --> <a href="gallery.html" class="gallery-btn"> Gallery </a> </div> </nav>
 <!-- HERO -->
 
 <section class="hero">
